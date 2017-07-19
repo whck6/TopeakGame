@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="plane.png" translatesAutoresizingMaskIntoConstraints="NO" id="bE9-Af-a8e">
+                                <rect key="frame" x="147.5" y="442" width="80" height="101"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="7bj-be-7q9" appends="YES" id="HmM-fd-rZD"/>
+                                </connections>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I3h-SP-Jcy">
+                                <rect key="frame" x="16" y="28" width="73" height="69"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UUn-EJ-E5y">
+                                <rect key="frame" x="140" y="28" width="73" height="69"/>
+                                <state key="normal" image="missile-type-1.png"/>
+                                <connections>
+                                    <action selector="changeWeapon:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R3E-w4-Zjr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FGA-DV-Ikt">
+                                <rect key="frame" x="213" y="28" width="73" height="69"/>
+                                <state key="normal" image="missile-type-2.png"/>
+                                <connections>
+                                    <action selector="changeWeapon:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WcV-rl-V5f"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0kY-hh-7WY">
+                                <rect key="frame" x="286" y="28" width="73" height="69"/>
+                                <state key="normal" image="missile-type-3.png"/>
+                                <connections>
+                                    <action selector="changeWeapon:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8G3-kr-bOV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="75S-Jf-Xsu">
+                                <rect key="frame" x="143" y="551" width="88" height="84"/>
+                                <state key="normal" image="fire.png"/>
+                                <connections>
+                                    <action selector="fire:" destination="BYZ-38-t0r" eventType="touchUpInside" id="voB-Km-fsb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="FGA-DV-Ikt" firstAttribute="leading" secondItem="UUn-EJ-E5y" secondAttribute="trailing" id="4nn-RF-brJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0kY-hh-7WY" secondAttribute="trailing" id="9hD-Z6-MXR"/>
+                            <constraint firstItem="UUn-EJ-E5y" firstAttribute="centerY" secondItem="FGA-DV-Ikt" secondAttribute="centerY" id="KwZ-7z-cPB"/>
+                            <constraint firstItem="0kY-hh-7WY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="O9s-6D-doi"/>
+                            <constraint firstItem="I3h-SP-Jcy" firstAttribute="height" secondItem="UUn-EJ-E5y" secondAttribute="height" id="R7a-hW-Zbq"/>
+                            <constraint firstItem="75S-Jf-Xsu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SB9-9H-svO"/>
+                            <constraint firstItem="I3h-SP-Jcy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="a6A-Ob-KWZ"/>
+                            <constraint firstItem="FGA-DV-Ikt" firstAttribute="centerY" secondItem="0kY-hh-7WY" secondAttribute="centerY" id="ne8-9F-V0w"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="75S-Jf-Xsu" secondAttribute="bottom" constant="32" id="ngw-VE-2Ae"/>
+                            <constraint firstItem="0kY-hh-7WY" firstAttribute="leading" secondItem="FGA-DV-Ikt" secondAttribute="trailing" id="oDA-2J-9hG"/>
+                            <constraint firstItem="I3h-SP-Jcy" firstAttribute="centerY" secondItem="UUn-EJ-E5y" secondAttribute="centerY" id="oEr-Im-6fC"/>
+                            <constraint firstItem="I3h-SP-Jcy" firstAttribute="width" secondItem="UUn-EJ-E5y" secondAttribute="width" id="p8X-Ev-jzB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="costLabel" destination="I3h-SP-Jcy" id="hkR-TG-hjw"/>
+                        <outlet property="fireButton" destination="75S-Jf-Xsu" id="4WJ-1L-83V"/>
+                        <outlet property="planeImageView" destination="bE9-Af-a8e" id="Hrz-xg-ej0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="7bj-be-7q9">
+                    <connections>
+                        <action selector="dragPlane:" destination="BYZ-38-t0r" id="zWA-Ss-uVK"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-84" y="-7"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="fire.png" width="88" height="84"/>
+        <image name="missile-type-1.png" width="73" height="69"/>
+        <image name="missile-type-2.png" width="73" height="69"/>
+        <image name="missile-type-3.png" width="73" height="69"/>
+        <image name="plane.png" width="80" height="101"/>
+    </resources>
+</document>
